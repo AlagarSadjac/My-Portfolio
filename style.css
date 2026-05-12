@@ -1,0 +1,223 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* --------------------------------------------------------------------------- */
+
+body { font-family: 'Poppins', sans-serif; background-color: #1a1a1a; color: white; overflow-x: hidden; }
+/* --------------------------------------------------------------------------- */
+
+.logo {
+    background: linear-gradient(45deg, #f1c40f, #f39c12);
+    -webkit-background-clip: text; /* நிறத்தை எழுத்துக்குள் மட்டும் கொண்டுவர */
+    -webkit-text-fill-color: transparent; /* பின்னணி நிறம் தெரிய எழுத்தை வெளிப்படையாக்க */
+    font-weight: 800; }
+/* --------------------------------------------------------------------------- */
+
+header { background: #111; padding: 20px; position: sticky; top: 0; z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: auto; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: #aaa; text-decoration: none; transition: 0.3s; font-weight: bold; }
+nav ul li a:hover { color: #f1c40f; }
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container { max-width: 800px; 
+             margin: auto; 
+             padding: 40px 20px; 
+             text-align: center; }
+
+/* செக்ஷன் ஸ்டைல் - ஆரம்பத்தில் மறைக்கப்படும் */
+.content-section { display: none; 
+                   min-height: 70vh; 
+                   animation: fadeIn 0.5s ease-in-out; }
+
+/* --------------------------------------------------------------------------- */
+ 
+
+.active { display: block; }
+/*---------------------------------------------------------------------------------- */
+
+.hero { text-align: center;
+     padding: 100px 20px;}
+
+/* பெயரை இன்னும் பெரிதாக்கி நிழல் கொடுக்க */
+.hero h1 { font-size: 4rem; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 10px rgba(241, 196, 15, 0.3); 
+    margin-bottom: 10px;}
+
+/* சப்-டைட்டில்களை அழகாக அடுக்க */
+.hero p { font-size: 1.2rem; 
+    color: #ccc; 
+    max-width: 600px; 
+    margin: 20px auto; 
+    line-height: 1.8; }
+
+/* --------------------------------------------------------------------------- */
+.name { color: #f1c40f; }
+
+/* --------------------------------------------------------------------------- */
+.dynamic-text::after {
+    content: "Full-Stack Developer";
+    animation: changeText 10s infinite;
+    color: #22c55E; /* மஞ்சள் நிறம் */
+    font-weight: bold;
+    padding-right: 5px;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+@keyframes changeText {  /* Animation oru kurippitta time varaikum pannu nu solrathuku use panrom */
+    0%, 20% { content: "Full-Stack Developer"; }
+    21%, 40% { content: "Android Expert"; }
+    41%, 60% { content: "Java Backend Developer"; }
+    61%, 80% { content: "Software Engineer"; }
+    81%, 100% { content: "UI/UX Specialist"; }
+}
+
+/*----------------------------------------------------------------------------- */
+.main-btn{ background: #f1c40f;
+           color: #000; 
+           border: none; 
+           padding: 12px 30px; 
+           font-size: 15px; 
+           border-radius: 10px; 
+           cursor: pointer; 
+           margin-top: 20px; 
+           font-weight: bold; }
+
+.main-btn.btn-outline {
+    background: transparent !important; /* பின்னணி நிறத்தை நீக்க */
+    color: #00d4ff;                    /* எழுத்து நிறம் */
+    box-shadow: none;                  /* நிழல் இருந்தால் நீக்க */
+}
+
+.main-btn.btn-outline:hover {  /* மவுஸை வைக்கும்போது (Hover) மட்டும் நிறம் மாற வேண்டுமானால் */
+    background: #00d4ff !important;
+    color: #fff;
+}
+/*--------------------------------------------------------------------*/
+/* 1. அபௌட் செக்ஷனை அழகாகக் காட்ட */
+#about {
+    background-color: #1e1e1e; /* லேசான கருப்பு நிறம் பின்னணிக்கு */
+    padding: 80px 40px;        /* உட்புற இடைவெளி */
+    border-radius: 10px;       /* ஓரங்களை வளைக்க */
+    margin: 40px auto;         /* மற்ற பகுதிகளுக்கும் இதற்கும் இடைவெளி */
+    max-width: 900px;          /* ரொம்ப நீளமாகப் போகாமல் தடுக்க */
+    text-align: center;        /* எழுத்துக்களை நடுவில் வைக்க */
+    border: 1px solid #333;    /* மெல்லிய பார்டர் */
+}
+
+/* 2. "About Me" தலைப்பிற்கு கலர் கொடுக்க */
+#about h2 {
+    color: #f1c40f;            /* மஞ்சள் நிறம் */
+    font-size: 2.5rem;         /* பெரிய எழுத்துக்கள் */
+    margin-bottom: 20px;       /* தலைப்பிற்குக் கீழே இடைவெளி */
+}
+
+/* 3. உங்களைப் பற்றிய பேரகிராஃப் ஸ்டைல் */
+#about p {
+    color: #ffffff;            /* வெள்ளை நிறம் */
+    font-size: 1.2rem;         /* படிக்க வசதியான அளவு */
+    line-height: 1.8;          /* வரிகளுக்கு இடையே இடைவெளி */
+    text-align: justify;       /* இருபுறமும் சமமாக அடுக்க */
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.next-btn { background: #f1c40f; color: #000; 
+            border: none; 
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer; 
+            margin-top: 20px; 
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(241, 196, 15, 0.6); }
+
+/* .............................................................................*/
+
+/* ஸ்கில்ஸ் பட்டியலை வரிசைப்படுத்த */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap; /* இடம் பத்தவில்லை என்றால் அடுத்த வரிக்கு வர */
+    gap: 12px;       /* ஒவ்வொரு ஸ்கில்லுக்கும் இடையில் இடைவெளி */
+    margin-top: 20px;
+}
+
+/* ஒவ்வொரு ஸ்கில் கார்டுக்கும் ஸ்டைல் */
+.skill-list span {
+    background: rgba(0, 212, 255, 0.1); /* லேசான நீல நிற பின்னணி */
+    color: #00d4ff;             /* பிரகாசமான நீல நிற எழுத்து (Electric Blue) */
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #00d4ff;  /* நீல நிற பார்டர் */
+    transition: all 0.3s ease;
+    cursor: default;
+    margin: 7px;
+    display: inline-block;
+}
+
+/* மவுஸை வைக்கும்போது (Hover Effect) */
+.skill-list span:hover {
+    background: #00d4ff;        /* முழு நீல நிறமாக மாறும் */
+    color: #fff;                /* எழுத்து வெள்ளை நிறமாக மாறும் */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4); /* நீல நிற நிழல் */
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.project-grid { display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    margin-top: 20px; }
+
+/*----------------------------------------------------------------------------------*/    
+
+.card { background: hsl(320, 91%, 57%); 
+        padding: 20px; 
+        border-radius: 10px; 
+        border-left: 5px solid #f1c40f; 
+    
+    }
+
+.card p{
+    margin-bottom: 6px;
+}
+
+h3{
+    color: #10ef62;                    /* எழுத்து நிறம் */
+} 
+
+.technology{
+     color: hsl(0, 6%, 33%);
+     margin-bottom: 5px;    
+     
+}        
+
+/*---------------------------------------------------------------------------------*/
+
+.app { background: #f1c40f; 
+    color:  hsl(235, 61%, 56%);
+    font-weight: bold;
+    border:#ccc; 
+    padding: 12px 30px;
+    font-size: 18px; 
+    border-radius: 10px;
+    cursor: pointer; 
+    margin-top: 50px; 
+    font-weight: bold; }
+
+.app.app-outline { background: transparent !important; /* பின்னணி நிறத்தை நீக்க */
+                   
+                   box-shadow: none;  }                  /* நிழல் இருந்தால் நீக்க */
+    
+.app:hover { background: #0ee435 !important;
+             color: #fff; }
+/*===================================================================================================================================*/
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+
+/* ================= MOBILE RESPONSIVE ================= */
+

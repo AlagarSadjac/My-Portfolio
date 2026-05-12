@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<!-- <head>...........user ku theriyatha config area.. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALAGARSAMY | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- _________________________________________________________________________________________________________________________________ -->
+    
+<body>
+<!-- header........-->
+      <header>                                             
+        <nav>
+        <div class="logo">Alaga.Dev</div>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+        </ul>
+        </div>
+        </nav>
+      </header>
+
+
+<div class="container">
+
+<!-- section..1 -->
+        <section id="home" class="content-section alaga active">    
+        <div class="hero">
+            <h1>Hi, I'm <span class="name">Alagarsamy</span></h1>
+            <p class="typing-text">I am a&nbsp; &nbsp;<span class="dynamic-text"></span></p>
+            <button class="main-btn" onclick="showSection('about')">Get Started</button>
+         </div>
+        </section>
+
+
+<!-- ---section..2 ---->
+        <section id="about" class="content-section">         
+            <h2>ABOUT ME</h2>
+            <p>I’m an MCA graduate and a developer focused on building scalable web applications.
+                My core strength lies in backend development using Java and Spring Boot, along with frontend skills in HTML, CSS, and JavaScript.
+                I enjoy solving real-world problems and have built projects including secure login systems and database-driven applications.
+                I’m actively seeking a developer role where I can apply my skills and continuously improve through hands-on experience..</p>
+            <button class="next-btn" onclick="showSection('skills')">View My Skills</button>
+        </section>
+
+<!-- section..3 -->      
+        <section id="skills" class="content-section">        
+            <h2>Technical skills</h2>
+            <div class="skill-list">
+                <span>Java</span> <span>Spring Boot</span> <span>Android Studio</span> 
+                <span>Firebase</span>  <span>PostgreSQL</span> <span>MySql</span>  <span>HTML</span>
+                <span>XML</span> <span>CSS</span> <span>Git</span> <span>GitHup</span> 
+                <span>JavaScript</span> <span>Kotlin</span> <span>Flutter(Dart)</span> <span>Jetpack Compose</span>
+                <span>Hibernate</span> <span>JPA</span> <span>Room Persistence Library</span> <span>Android SDK</span>
+                <span>Rest API</span> <span>JSON</span> <span>Retrofit</span> <span>Intelliji IDEA</span>
+                <span>MySql Workbench</span> <span>pgAdmin 4</span> <span>Visual Studio Code</span>
+
+            </div>
+            <button class="next-btn" onclick="showSection('projects')">View My Projects</button>
+        </section>
+
+<!-- section..4 -->
+        <section id="projects" class="content-section">        
+          <h2>My Projects</h2>
+          <div class="project-grid">
+                                    
+             <div class="card">      
+                <h3>AlagaBrowser</h3><br>
+                <p>A lightweight Android web browser built for fast and smooth browsing with a clean UI</p>
+                <p><span class="technology" >Java • Android SDK • WebView • XML</span></p>
+                <a href="https://github.com/AlagarSadjac/AlagaBrowser/releases/download/V1.0/app-debug.apk" class="app app-outline">Download App </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/AlagaBrowser.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>  
+
+
+            <div class="card">
+                <h3>Alaga English Learning Hub</h3><br>
+                <p>A comprehensive web platform designed to help students master English grammar and conversational skills</p>
+                <p><span class="technology" >HTML • CSS • JavaScript </span></p>
+                <a href="https://alaga-english-hub-web.onrender.com" class="app app-outline">Visit Website </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/Alaga-English-Hub-Web.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>  
+
+            <div class="card">
+                <h3>AlagaCalculator</h3><br>
+                <p>A simple calculator application developed in Android Studio with basic arithmetic functionalities</p>
+               <p><span class="technology" >Java • Android SDK • XML</span></p>
+                <a href="https://github.com/AlagarSadjac/AlagaCalculator/releases/download/v1.1/app-debug.apk" class="app app-outline">Download App </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/AlagaCalculator.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>
+   
+            <div class="card">
+                <h3>M_Weather</h3><br>
+                <p>A real-time weather app providing accurate temperature and climate updates via API integration</p>
+                <p> <span class="technology" >Retrofit • Android SDK • Java • OpenWeather API • XML</span></p>
+                <a href="https://github.com/AlagarSadjac/M_Weather/releases/download/v1.0.0/app-debug.apk" class="app app-outline">Download App </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/M_Weather.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>
+            
+            <div class="card">
+                <h3>MYChannel</h3><br>
+                <p>A personalized Android application to browse and stream my YouTube channel content and music in real-time</p>
+                <p><span class="technology" >Java • Android SDK • Firebase • WebView • XML</span></p>
+                <a href="https://github.com/AlagarSadjac/MyChannel/releases/download/V1.0.0/app-debug.apk" class="app app-outline">Download App </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/MyChannel.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>
+
+
+            <div class="card">
+                <h3>Student Info</h3><br>
+                <p>A smart Android app to manage and store student records locally using Room Database for persistent storage</p>
+                <p><span class="technology" >Room Database(SqLite) • Android SDK • java • XML</span></p>
+                <a href="https://github.com/AlagarSadjac/Student-Info/releases/download/V1.0.1/app-debug.apk" class="app app-outline">Download App </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/Student-Info.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>
+
+              <div class="card">
+                <h3>Employee Management REST API</h3><br>
+                <p>A lightweight Android web browser built for fast and smooth browsing with a clean UI</p>
+                <p><span class="technology" >Java • Spring Boot • PostgreSQL • Render
+                <a href="https://employee-crud-rest-api.onrender.com/api/employees" class="app app-outline">Lve API Link </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/Employee-Management-REST-API.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>
+
+            <!-- <div class="card">
+                <h3>E-Cart-Mobile-Store-API</h3><br>
+                <p>A lightweight Android web browser built for fast and smooth browsing with a clean UI</p>
+                <p><span class="technology" >Java • Android SDK • WebView • XML</span></p>
+                <a href="https://github.com/AlagarSadjac/AlagaBrowser/releases/download/V1.0/app-debug.apk" class="app app-outline">Download App </a>
+                <br>
+                <br>
+                <a href="https://github.com/AlagarSadjac/E-Cart-Mobile-Store-API.git" target="_blank" class="main-btn btn-outline">View GitHub</a> 
+            </div>  -->
+
+
+           
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
